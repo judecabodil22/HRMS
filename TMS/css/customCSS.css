@@ -1,0 +1,64 @@
+
+    
+    .card
+        {
+        /*    -webkit-box-shadow: 1px 4px 5px 0px rgba(102,100,102,1);
+            -moz-box-shadow: 1px 4px 5px 0px rgba(102,100,102,1);
+            box-shadow: 1px 4px 5px 0px rgba(102,100,102,1);
+            border-radius: 140px 0px 144px 0px;
+            -moz-border-radius: 140px 0px 144px 0px;
+            -webkit-border-radius: 140px 0px 144px 0px;
+                       border: 0px solid #000000;
+             */
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:4em;
+            width: 40%;
+            background-color:transparent !important;
+        }
+     
+   .userLogo
+        {
+            font-size:200px;
+            color:#64b6ac;
+            
+        }
+        
+       
+        
+    #btnSubmit
+        {
+           width:100%;
+           background-color:#5d737e;
+           color:white;
+        }
+        
+        #illusion
+        {
+            
+            
+    left: 26.1em;
+    width:27.8em;
+    height:1px;
+    background-color: red;
+    float:right;
+    position:absolute;
+    bottom: 26px;
+    
+            z-index: -2;
+        }
+     
+        
+        body
+        {
+            background-color: #fcfffd;
+        }
+        
+        .semi
+        {
+            background-color: #daffef !important;
+        }
+       
+        
+        
