@@ -11,6 +11,9 @@ import javax.validation.constraints.NotBlank;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="userTable")
 @EntityListeners(AuditingEntityListener.class)
@@ -29,29 +32,6 @@ public class User {
 	private long bill_id;
 	
 
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public long getBill_id() {
-		return bill_id;
-	}
-	public void setBill_id(long bill_id) {
-		this.bill_id = bill_id;
-	}
+	
 
 }

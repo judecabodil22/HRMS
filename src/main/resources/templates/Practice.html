@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Title is this</title>
+</head>
+<body>
+<p>info will be displayed here</p>
+<table>
+	<tr th:each="abc:${abc}">
+		<td th:text="${abc.username}">sads</td>	
+	</tr>
+</table>
+</body>
+</html>

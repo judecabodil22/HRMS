@@ -10,13 +10,13 @@ $(document).ready(function()
     
     function Check()
     {
-           if($('#Password').val().length>=8)
+           if($('.Password').val().length>=8)
              {
                  
                $('#pwHelp').attr('hidden',true);
                
                  
-               if($('#CPassword').val() != $('#Password').val())
+               if($('#CPassword').val() != $('.Password').val())
                    {
                           
                        
@@ -29,7 +29,7 @@ $(document).ready(function()
                           {$('#emailHelp').attr('hidden',false);
                           
                           $('#ip1').attr('class','input-group-text text-danger');
-                          $('#Password').attr('class','form-control border border-danger');
+                          $('.Password').attr('class','form-control border border-danger Password');
                        
                           $('#ip2').attr('class','input-group-text text-danger');
                           $('#CPassword').attr('class','form-control border border-danger');
@@ -44,7 +44,7 @@ $(document).ready(function()
                          $('#btnSubmit').prop('disabled',false);
                          
                          $('#ip1').attr('class','input-group-text text-success');
-                         $('#Password').attr('class','form-control border border-success');
+                         $('.Password').attr('class','form-control border border-success Password');
                          
                            $('#ip2').attr('class','input-group-text text-success');
                          $('#CPassword').attr('class','form-control border border-success');
@@ -59,17 +59,17 @@ $(document).ready(function()
     
     
     
-    $('#Password').keyup(function(e)
+    $('.Password').keyup(function(e)
     {
         Check();
    
-      if($('#Password').val().length<8)
+      if($('.Password').val().length<8)
           {
               $('#pwHelp').attr('hidden',false);
               $('#emailHelp').attr('hidden',true);
           }
         
-        else if($('#Password').val().length>=8)
+        else if($('.Password').val().length>=8)
             {
                    $('#pwHelp').attr('hidden',true);
             }
@@ -96,6 +96,7 @@ $(document).ready(function()
         $('#subP').animate({color:"#64b6ac"},2000)  
         $("#illusion").prop('hidden',false);
         $("#illusion").animate({height:'518px'},3000);
+        $("#form1").submit();
       
   
     });
