@@ -28,12 +28,10 @@
          
             <div class="card-body">
                     
-              
+              <!-- th:action="@{/register}" -->
                 
-                <form id="form1" action="#" th:action="@{/register/success}" th:object="${user}" method="post">
+                <form id="form1" th:action="@{/register}" th:object="${user}" method="post">
 
-        
-        
             <div class="form-group">
                 <p id="subP" class="lead"><strong>Fill up the details as required</strong></p>
                
@@ -70,8 +68,16 @@
              <small id="pwHelp" class="form-text text-muted" hidden="true">Password must be minimum 8 characters.</small>
                     </div>
                     
-                    <button id="btnSubmit" type="button" class="btn btn-primary btn-block" disabled><b>Submit</b></button>
-                  
+                    <!-- <input value="Submit" id="btnSubmit" name="Submit" type="submit" class="btn btn-primary btn-block" disabled>
+                  	 -->
+                  	 
+                  	<!-- Working <input value="Submit" id="Submit" name="Submit" type="submit" class="btn btn-primary btn-block">
+					 -->
+					 <!-- <button name="Submit" type="submit" class="btn btn-primary btn-block"><b>Submit</b></button>
+         -->		
+         			
+         		<input value="Submit" name="Submit" type="submit" class="btn btn-primary btn-block">		
+        
         </form>
                 </div>
         </div>
