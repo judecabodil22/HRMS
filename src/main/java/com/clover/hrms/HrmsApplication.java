@@ -13,15 +13,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableAsync
+
 
 public class HrmsApplication {
-	
-	
-	 @Bean(name = "threadPoolTaskExecutor")
-	    public Executor threadPoolTaskExecutor() {
-	        return new ThreadPoolTaskExecutor();
-	    }
 	
 	public static void main(String[] args) {
 		SpringApplication.run(HrmsApplication.class, args);

@@ -92,12 +92,13 @@ $(document).ready(function()
     $("#btnSubmit").click(function(event){
         
         event.preventDefault();
-      
+        
+        $("#form1").submit();
         $('#subP').animate({color:"#64b6ac"},2000)  
         $("#illusion").prop('hidden',false);
         $("#illusion").animate({height:'518px'},3000);
-        $("#form1").submit();
-        $("#illusion").animate({height:'2323232px'},3000);
+       
+     
       
   
     });
