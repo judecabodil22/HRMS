@@ -6,8 +6,7 @@ $(document).ready(function()
     {
        Check();
     });
-    
-    
+     
     function Check()
     {
            if($('.Password').val().length>=8)
@@ -87,22 +86,7 @@ $(document).ready(function()
           
         
 });
-        
- 
-    $("#btnSubmit").click(function(event){
-        
-        event.preventDefault();
-        
-        $("#form1").submit();
-        $('#subP').animate({color:"#64b6ac"},2000)  
-        $("#illusion").prop('hidden',false);
-        $("#illusion").animate({height:'518px'},3000);
-       
-     
-      
-  
-    });
-    
+           
     $('#ip0').focusout(function()
                    {
         

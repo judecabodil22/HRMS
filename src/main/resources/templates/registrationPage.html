@@ -21,6 +21,12 @@
   
     
 <body>
+    
+   				<div class="alert alert-success fade show" id="alert-Issuccess">
+            		<h4 class="alert-heading">Well Done!</h4>
+            		<p>You are now registered as *name* and you will be redirected to the login page in *seconds*</p>
+        		</div>
+    
     <div class="text-center container">
         
        <div class="card semi" id="illusion" hidden="true"></div>
@@ -68,15 +74,17 @@
              <small id="pwHelp" class="form-text text-muted" hidden="true">Password must be minimum 8 characters.</small>
                     </div>
                     
-                    <!-- <input value="Submit" id="btnSubmit" name="Submit" type="submit" class="btn btn-primary btn-block" disabled>
+                    <!-- <input value="Submit" id="btnSubmit" name="Submit" type="button" class="btn btn-primary btn-block" disabled>
                   	 -->
+                  	 
+                  	<button id="btnSubmit" type="button" class="btn btn-primary btn-block" disabled><b>Submit</b></button> 
                   	 
                   	<!-- Working <input value="Submit" id="Submit" name="Submit" type="submit" class="btn btn-primary btn-block">
 					 -->
 					 <!-- <button name="Submit" type="submit" class="btn btn-primary btn-block"><b>Submit</b></button>
          -->		
          			
-         		<input value="Submit" name="Submit" type="submit" class="btn btn-primary btn-block">		
+         		<!-- <input value="Submit" name="Submit" type="submit" class="btn btn-primary btn-block">		 -->
         
         </form>
                 </div>
@@ -93,6 +101,7 @@
 <script th:src="@{/vendors/bootstrap/js/jquery.animate-colors.js}"></script>
 <script th:src="@{/vendors/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/js/configurations.js}"></script>
+<script th:src="@{/js/ajax.js}"></script>
     
     
 </html>

@@ -59,6 +59,15 @@
         {
             background-color: #daffef !important;
         }
+        
+        #alert-Issuccess
+        {
+        	display:none;
+        	position:absolute;
+        	left:55em;
+        	float:right;
+        	width:25em;
+        }
        
         
         
