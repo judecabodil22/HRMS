@@ -1,15 +1,15 @@
 $(document).ready(function()
 {
-    $('#btnSubmit').prop('disabled',true);
+    $('#btnResetPW').prop('disabled',true);
     
-    $('#CPassword').keyup(function(e)
+     $('#CPassword').keyup(function(e)
     {
        Check();
     });
-     
+    
     function Check()
     {
-           if($('.Password').val().length>=8)
+          if($('.Password').val().length>=8)
              {
                  
                $('#pwHelp').attr('hidden',true);
@@ -25,16 +25,17 @@ $(document).ready(function()
                            }
                        else
                        
-                          {$('#emailHelp').attr('hidden',false);
+                          {
+                              $('#emailHelp').attr('hidden',false);
                           
-                          $('#ip1').attr('class','input-group-text text-danger');
-                          $('.Password').attr('class','form-control border border-danger Password');
+                        
+                          //$('.Password').attr('class','form-control border border-danger Password');
                        
-                          $('#ip2').attr('class','input-group-text text-danger');
+                      
                           $('#CPassword').attr('class','form-control border border-danger');
                            
-                           $('#btnSubmit').prop('disabled',true);
-                   }
+                          $('#btnResetPW').prop('disabled',true);
+                          }
                    }
                  
                  else
@@ -48,17 +49,15 @@ $(document).ready(function()
                            $('#ip2').attr('class','input-group-text text-success');
                          $('#CPassword').attr('class','form-control border border-success');
                      }
-             }
+            }
         else
             {
                $('#pwHelp').attr('hidden',false);
             }
-        
+    
     }
     
-    
-    
-    $('.Password').keyup(function(e)
+     $('.Password').keyup(function(e)
     {
         Check();
    
@@ -85,22 +84,18 @@ $(document).ready(function()
             }
           
         
+    
+    
 });
-           
-    $('#ip0').focusout(function()
-                   {
-        
-       if(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($('#ip0').val()))
-           {
-                $('#forEmail').attr('class','input-group-text text-success');
-           }
-        else
-            {
-                $('#forEmail').attr('class','input-group-text text-danger');
-            }
-        
+    
+    $("#forModal1").click(function()
+                         {
+        $("#forgotModal1").modal('hide');
     });
     
-   
+     $("#forModal0").click(function()
+                         {
+        $("#forgotModal0").modal('hide');
+    });
     
 });

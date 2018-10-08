@@ -5,7 +5,7 @@ $(document).ready(function()
         event.preventDefault();
         
         //$("#form1").submit();
-        $('#subP').animate({color:"#64b6ac"},2000)  
+        $('#subP').animate({color:"#64b6ac"},5000)  
         $("#illusion").prop('hidden',false);
        
        
@@ -23,7 +23,19 @@ $(document).ready(function()
           contentType:"application/json",
           success:function()
           {
-             $("#illusion").animate({height:'518px'},3000);
+             $("#illusion").animate({height:'518px'},5000);
+             
+             var count = 5;
+             
+             setInterval(function()
+            {
+              count--;
+              if(count!=0)
+              {$("#countDown").html(count);}
+              else
+              {window.location.replace("/login");}
+            },1000);
+             
              $("#alert-Issuccess").slideDown(1000);
           },
           error : function(e) {

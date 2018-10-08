@@ -14,12 +14,19 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.clover.hrms.Model.User;
 import com.clover.hrms.Repositories.UserRepository;
+import com.clover.hrms.Services.UserService;
 
 @RestController
 public class UserController {
 	
 	@Autowired
 	UserRepository userRep;
+	
+	@Autowired
+	UserService userServ;
+	
+	
+	String name;
 	
 	@GetMapping("/usersSelect")
 	public List<User> getAllUser()
@@ -37,7 +44,8 @@ public class UserController {
 	@ResponseBody
 	@PostMapping("/register")
 	public @Valid User addUser(@RequestBody User user)
-	{
+	{	
+		user.setName(userServ.generateName());
 		return  userRep.save(user);	
 	}
 	

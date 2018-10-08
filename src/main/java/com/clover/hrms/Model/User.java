@@ -28,6 +28,9 @@ public class User {
 	private String username;
 	@NotBlank
 	@Column(nullable=false)
+	private String name;
+	@NotBlank
+	@Column(nullable=false)
 	private String password;
 	private long bill_id;
 	

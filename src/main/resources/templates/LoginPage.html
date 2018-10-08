@@ -1,0 +1,203 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+	xmlns:sf="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+<meta charset="ISO-8859-1">
+
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Login! | HMS</title>
+<link th:href="@{/vendors/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/vendors/fontawesome-free-5.3.1-web/css/all.css}"
+	rel="stylesheet" />
+<link th:href="@{/css/customCSS.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div class="text-center container">
+
+		<div class="card semi" id="illusion" hidden="true"></div>
+		<div class="card">
+
+			<div class="card-body">
+
+				<form id="form1">
+					<div class="form-group">
+						<p id="subP" class="lead">
+							<strong>Sign in </strong>
+						</p>
+
+						<i id="logo1" class="fas fa-user-tie userLogo"></i>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+
+							<span id="forEmail" class="input-group-text"><i
+								class="fas fa-at"></i></span> <input type="email" placeholder="Email"
+								class="form-control" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+							<input min="8" type="password" placeholder="Password"
+								class="form-control" data-toggle="popover"
+								data-content="Minimum of 8 characters" data-trigger="focus"
+								id="kath" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button id="btnSubmitLogin" type="submit"
+							class="btn btn-primary btn-block">
+							<b>Login</b>
+						</button>
+						<small class="form-text text-muted">Not registered? <a
+							href="registrationPage.html">Create an account</a></small> <small
+							class="form-text text-muted">Forgot your account? <a
+							href="" data-toggle="modal" data-target="#forgotModal0">Click
+								Here!</a></small>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- new password/reset password-->
+	<div class="modal fade" id="forgotModal2">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Password Reset</h5>
+				</div>
+
+				<div class="modal-body">
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<div class="input-group">
+								<label class="col-sm-5">New Password</label>
+								<div class="col-sm-7">
+									<input min="8" type="password" placeholder="Password"
+										class="form-control Password" data-toggle="popover"
+										data-content="Minimum of 8 characters" data-trigger="focus"
+										id="kath" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<label class="col-sm-5">Confirm Password</label>
+								<div class="col-sm-7">
+									<input id="CPassword" type="password"
+										placeholder="Confirm Password" class="form-control" required>
+									<small id="emailHelp" class="form-text text-muted"
+										hidden="true">Password do not match.</small> <small
+										id="pwHelp" class="form-text text-muted" hidden="true">Password
+										must be minimum 8 characters.</small>
+								</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" id="btnResetPW" class="btn btn-info">Submit</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!--code validation-->
+	<div class="modal fade" id="forgotModal1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Code Validation</h5>
+				</div>
+
+				<div class="modal-body">
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<div>
+								<div class="input-group">
+									<label class="control-label col-sm-5">Code:</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+				<div class="modal-footer">
+					<button data-toggle="modal" data-target="#forgotModal2"
+						id="forModal1" type="button" class="btn btn-info">Next</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--email validation-->
+	<div class="modal fade" id="forgotModal0">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Email Validation</h5>
+				</div>
+
+				<div class="modal-body">
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<div>
+								<div class="input-group">
+									<label class="control-label col-sm-5">Email Address:</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+				<div class="modal-footer">
+					<button data-toggle="modal" data-target="#forgotModal1"
+						id="forModal0" type="button" class="btn btn-info">Next</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+<script th:src="@{/vendors/bootstrap/js/popper.min.js}"></script>
+<script th:src="@{/vendors/bootstrap/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/vendors/bootstrap/js/jquery.animate-colors.js}"></script>
+<script th:src="@{/vendors/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/LoginConfig.js}"></script>
+<script th:src="@{/vendors/animated-page-transition-master/js/main.js}"></script>
+<!-- Resource jQuery -->
+
+</html>
